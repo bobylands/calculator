@@ -63,11 +63,32 @@ buttons.forEach((button)=>{
             // console.log(operator)
             // break
 
+            
+
+            //pas encore fini
             case e.target.classList.contains("return"):
-            operator = operator.slice(0,operator.length-1)
+                if(num2 !== ""){
+                    num2 = num2.slice(0, -1)
+                    console.log("num2 is " + num2)
+                }
+                else if(num2 == "" && operator !== ""){
+                    operator = ""
+                    console.log(operator)
+                }
+                else{
+                    num1 = num1.slice(0, -1)
+                    console.log("num1 is " + num1)
+                }
             console.log(total)
-            screen.textContent = screen.textContent.slice(0,operator.length-1)
+            screen.textContent = screen.textContent.slice(0,-1)
             break
+
+
+
+
+
+
+
 
             case e.target.classList.contains("answer"):
             operate()
