@@ -38,10 +38,6 @@ buttons.forEach((button)=>{
             num1 = 0
             num2 = 0
             total = 0
-            console.log(operator)
-            console.log(num1)
-            console.log(num2)
-            console.log(total)
             break
 
             // case e.target.classList.contains("paranthese"):
@@ -62,6 +58,16 @@ buttons.forEach((button)=>{
             // screen.textContent += "%"
             // console.log(operator)
             // break
+
+            case e.target.classList.contains("dot"):
+               if(num1.includes(".") == false){
+                num1 += e.target.textContent
+                screen.textContent += "."}
+            else if(num2.includes(".") == false){
+                num2 += e.target.textContent
+                screen.textContent += "."
+            }
+            break
 
 
             case e.target.classList.contains("return"):
